@@ -1,0 +1,73 @@
+/////////////////////////////////////////////Encryption and Decryption Using Block Cipher Algorithms////////////////////////////////////
+Approval Status of Symmetric Algorithms Used for Encryption and Decryption:
+AES-128,
+AES-192,
+AES-256
+
+////////////////////////////////////////////Digital Signatures/////////////////////////////////////////////////////////////////////////
+Approval Status of Algorithms Used for Digital Signature Generation and Verification
+Digital Signature Generation:
+DSA: len(p) ≥ 2048 AND len(q) ≥ 224
+RSA: len(n) ≥ 2048
+ECDSA: len(n) ≥ 224
+
+Digital Signature Verification:
+DSA: len(p) ≥ 2048 AND len(q) ≥ 224
+RSA: len(n) ≥ 2048
+ECDSA: len(n) ≥ 224
+
+Key lengths providing at least 112 bits of security are acceptable for the generation and verification of digital signatures using approved algorithms.  
+
+////////////////////////////////////////////Random Bit Generation/////////////////////////////////////////////////////////////////////
+Approval Status of Algorithms Used for Random Bit Generation 
+HASH_DRBG,
+HMAC_DRBG, 
+CTR_DRBG 
+
+////////////////////////////////////////////Key Agreement Using Diffie-Hellman and MQV////////////////////////////////////////////////
+Approval Status for SP 800-56A Key Agreement (DH and MQV) Schemes
+SP 800-56A DH and MQV schemes using finite fields:  
+acceptable if:
+len(p)≥ 2048 and len(q) ≥ 224
+
+SP 800-56A DH and MQV schemes using elliptic curves:
+In [SP 800-56A], five parameter sets are defined: EA – EE. Except for the EA parameter set, all of them define acceptable ECC parameter sizes. The acceptable values for len(n) and len(h) are provided in the following table.
+
+					          |    EB   |    EC   |    ED   |    EE   |
+Length of n			    | 224-255 |	256-383 | 384-511 |   512+  |
+Maximum bit 		    |		      |			    |		      |			    |
+length cofactor h   |    14   |	  16    |    24   |    32   |
+
+////////////////////////////////////////////Key Agreement and Key Transport Using RSA////////////////////////////////////////////////
+Approval Status for the RSA-based Key Agreement and Key Transport Schemes
+SP 800-56B Key Agreement and Key Transport schemes is acceptable if len(n) ≥ 2048 
+
+////////////////////////////////////////////Key Wrapping/////////////////////////////////////////////////////////////////////////////
+Approval Status of Block Cipher Algorithms Used for Key Wrapping
+AES and three-key TDEA are acceptable for both the wrapping and unwrapping of keying material using approved methods
+
+////////////////////////////////////////////Deriving Additional Keys from a Cryptographic Key////////////////////////////////////////
+Approval Status of the Algorithms Used for a Key Derivation Function (KDF)
+
+The use of HMAC-based KDFs is acceptable using an approved hash function, including SHA-1. See Section 10
+ for discussions of the key lengths used with HMAC
+
+The use of AES and three-key TDEA as the block cipher algorithm in a CMAC-based KDF is acceptable
+
+////////////////////////////////////////////Hash Functions///////////////////////////////////////////////////////////////////////////
+Approval Status of Hash Functions
+SHA-1 should NOT be used for signature generation nor verification. For all other hash function applications, the use of SHA-1 is acceptable
+ 
+SHA-2 and SHA-3 families: the use of these hash functions is acceptable for all hash function applications
+
+////////////////////////////////////////////Hash Functions///////////////////////////////////////////////////////////////////////////
+Approval Status of MAC Algorithms
+
+HMAC Generation with Key lengths ≥ 112 bits - Acceptable
+HMAC Verification with Key lengths ≥ 112 bits - Acceptable
+
+CMAC Generation with AES and Three-key TDEA - Acceptable
+CMAC Verification with AES and Three-key TDEA - Acceptable
+
+GMAC Generation with AES - Acceptable
+GMAC Verification with AES - Acceptable
