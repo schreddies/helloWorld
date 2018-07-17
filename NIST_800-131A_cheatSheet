@@ -60,7 +60,7 @@ SHA-1 should NOT be used for signature generation nor verification. For all othe
  
 SHA-2 and SHA-3 families: the use of these hash functions is acceptable for all hash function applications
 
-////////////////////////////////////////////Hash Functions///////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////Message Authentication Codes///////////////////////////////////////////////////////////////////////////
 Approval Status of MAC Algorithms
 
 HMAC Generation with Key lengths ≥ 112 bits - Acceptable
