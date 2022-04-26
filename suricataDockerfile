@@ -1,0 +1,17 @@
+FROM ubuntu:latest
+
+RUN apt update && apt upgrade -y 
+ENV DEBIAN_FRONTEND=noninteractive 
+RUN apt install openssh-server sudo nano vim software-properties-common -y
+RUN sudo add-apt-repository ppa:oisf/suricata-stable
+RUN sudo apt install suricata jq -y
+
+RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 test 
+
+RUN  echo 'test:test' | chpasswd
+
+RUN service ssh start
+
+EXPOSE 22
+
+CMD ["/usr/sbin/sshd","-D"]
