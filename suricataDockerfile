@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN apt update && apt upgrade -y 
 ENV DEBIAN_FRONTEND=noninteractive 
-RUN apt install openssh-server sudo nano vim software-properties-common -y
+RUN apt install openssh-server sudo nano vim software-properties-common iproute2 -y
 RUN sudo add-apt-repository ppa:oisf/suricata-stable
 RUN sudo apt install suricata jq -y
 
