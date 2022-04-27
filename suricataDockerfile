@@ -15,3 +15,20 @@ RUN service ssh start
 EXPOSE 22
 
 CMD ["/usr/sbin/sshd","-D"]
+
+/////////////////////////with http/////////////////////////
+#FROM ubuntu:latest
+#
+#RUN apt update --fix-missing && apt upgrade -y 
+#ENV DEBIAN_FRONTEND=noninteractive 
+#RUN apt install apache2 openssh-server sudo nano vim software-properties-common -y
+#RUN sudo add-apt-repository ppa:oisf/suricata-stable
+#RUN sudo apt install suricata jq -y
+#
+#RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 test 
+#
+#RUN  echo 'test:test' | chpasswd
+#
+#EXPOSE 80
+#
+#CMD ["apachectl", "-D", "FOREGROUND"]
